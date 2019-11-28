@@ -9,7 +9,9 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
     // 2- if the value of the name.value equals an empty string
     // 2- or if the name.value equal to null 
    // 2-  that means the user did not pass in any name
-   if(name.value === '' || name.value == null) 
+   if (name.value === '' || name.value == null) {
+      // 3- because of that we are going to send a message
+   }
                         
    e.preventDefault() // 1- to prevent the page from submitting if we have errors
 })
