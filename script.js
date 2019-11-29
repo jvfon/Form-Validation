@@ -23,7 +23,7 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
       e.preventDefault()
       // 5- taking our error, setting the innerText and joining each one by a comma
       // 5- so they are all separated from each other.
-      errorElement.inneText = messages.join(', ')
+      errorElement.innerText = messages.join(', ')
    }
                         
    e.preventDefault() // 1- to prevent the page from submitting if we have errors
