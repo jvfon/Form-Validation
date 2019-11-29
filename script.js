@@ -13,7 +13,7 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    // 2-  that means the user did not pass in any name
    if (name.value === '' || name.value == null) {
       // 3- because of that we are going to send a message
-      messsage.push('Name is required');
+      messages.push('Name is required');
    }
 
    // 4- if the length of the message is greater than 0 
