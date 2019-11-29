@@ -3,7 +3,7 @@ const name = document.getElementById('name')
 const password = document.getElementById('password')
 const form = document.getElementById('form')
 // 4- we create another variable
-const 
+const errorElement = document.getElementById()
 
 // 1- in order to catch errors we need to add an event listener to the form
 form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listener
@@ -17,7 +17,7 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    }
 
    // 4- if the length of the message is greater than 0 
-   if  (messages.legnth > 0 ) {
+   if  (messages.legnth > 0) {
       // 4- we want to prevent the actual form from submitting
       // 4- and we want to send the errors to our error
       e.preventDefault()
