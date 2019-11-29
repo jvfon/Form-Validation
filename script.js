@@ -17,11 +17,13 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    }
 
    // 4- if the length of the message is greater than 0 
-   if  (messages.legnth > 0) {
+   if  (messages.length > 0) {
       // 4- we want to prevent the actual form from submitting
       // 4- and we want to send the errors to our error (id)
       e.preventDefault()
-      // 5- 
+      // 5- taking our error, setting the innerText and joining each one by a comma
+      // 5- so they are all separated from each other.
+      errorElement.inneText = messages.join(', ')
    }
                         
    e.preventDefault() // 1- to prevent the page from submitting if we have errors
