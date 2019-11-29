@@ -2,7 +2,7 @@
 const name = document.getElementById('name')
 const password = document.getElementById('password')
 const form = document.getElementById('form')
-// 4- we create another variable and passing the 'error' id
+// 5- we create another variable and passing the 'error' id
 const errorElement = document.getElementById('error')
 
 // 1- in order to catch errors we need to add an event listener to the form
@@ -21,6 +21,7 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
       // 4- we want to prevent the actual form from submitting
       // 4- and we want to send the errors to our error (id)
       e.preventDefault()
+      // 5- 
    }
                         
    e.preventDefault() // 1- to prevent the page from submitting if we have errors
