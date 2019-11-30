@@ -8,6 +8,7 @@ const errorElement = document.getElementById('error');
 
 // 1- in order to catch errors we need to add an event listener to the form
 form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listener
+
    let messages = []  // 2- checking for errors
    // 2- if the value of the name.value equals an empty string
    // 2- or if the name.value equal to null 
@@ -45,13 +46,6 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
 })
 
 
-const name = document.getElementById('name')
-const password = document.getElementById('password')
-const form = document.getElementById('form')
-const errorElement = document.getElementById('error')
-
-form.addEventListener('submit', (e) => {
-  let messages = []
   if (name.value === '' || name.value == null) {
     messages.push('Name is required')
   }
