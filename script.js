@@ -14,8 +14,10 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    // 2- or if the name.value equal to null 
    // 2-  that means the user did not pass in any name
    if (name.value === '' || name.value == null) {
+      
       // 3- because of that we are going to send a message
       messages.push('Name is required');
+      
    }
 
    // 6- if the password have other requirements
