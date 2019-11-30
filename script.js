@@ -8,7 +8,6 @@ const errorElement = document.getElementById('error');
 
 // 1- in order to catch errors we need to add an event listener to the form
 form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listener
-
    let messages = []  // 2- checking for errors
    // 2- if the value of the name.value equals an empty string
    // 2- or if the name.value equal to null 
@@ -23,15 +22,15 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    // 6- if the password have other requirements
    // 6- if the password is less or equal to 6 characters we can say that 
    // 6- the password needs to be longer
-   if (messages.length <= 6) {
+   if (password.value.length <= 6) {
       messages.push('Password must be longer than 6 characters.');
    }
 
-   if (messages.length >= 20) {
+   if (password.value.length >= 20) {
       messages.push('Password must be less than 20 characters.');
    }
 
-   if (password === 'password') {
+   if (password.value === 'password') {
       messages.push('Password cannot be password');
    }
 
@@ -47,25 +46,3 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
                         
 })
 
-
-  if (name.value === '' || name.value == null) {
-    messages.push('Name is required')
-  }
-
-  if (password.value.length <= 6) {
-    messages.push('Password must be longer than 6 characters')
-  }
-
-  if (password.value.length >= 20) {
-    messages.push('Password must be less than 20 characters')
-  }
-
-  if (password.value === 'password') {
-    messages.push('Password cannot be password')
-  }
-
-  if (messages.length > 0) {
-    e.preventDefault()
-    errorElement.innerText = messages.join(', ')
-  }
-})
