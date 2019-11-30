@@ -23,6 +23,14 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
       messages.push('Password must be longer than 6 characters.');
    }
 
+   if (messages.length >= 20) {
+      messages.push('Password must be less than 20 characters.');
+   }
+
+   if (password === 'password') {
+      messages.push('Password cannot be password');
+   }
+
    // 4- if the length of the message is greater than 0 
    if  (messages.length > 0) {
       // 4- we want to prevent the actual form from submitting
