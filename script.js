@@ -1,4 +1,3 @@
-
 // first input name
 const name = document.getElementById('name');
 const password = document.getElementById('password');
@@ -9,8 +8,8 @@ const errorElement = document.getElementById('error');
 // 1- in order to catch errors we need to add an event listener to the form
 form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listener
    let messages = []  // 2- checking for errors
-    // 2- if the value of the name.value equals an empty string
-    // 2- or if the name.value equal to null 
+   // 2- if the value of the name.value equals an empty string
+   // 2- or if the name.value equal to null 
    // 2-  that means the user did not pass in any name
    if (name.value === ' ' || name.value == null) {
       // 3- because of that we are going to send a message
@@ -21,7 +20,7 @@ form.addEventListener('submit', (e) => {  // 1- adding the 'submit' event listen
    // 6- if the password is less or equal to 6 characters we can say that 
    // 6- the password needs to be longer
    if (messages.length <= 6) {
-      messages.push("Password must be longer than 6 characters.");
+      messages.push('Password must be longer than 6 characters.');
    }
 
    // 4- if the length of the message is greater than 0 
