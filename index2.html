@@ -22,8 +22,9 @@
       <div class="row">
 
          <!-- the form will take half of the page
-         s6 because it half of the page has 16 units-->
-         <form class="col s6" id="myform">
+         s6 because it half of the page has 16 units
+         'novalidate' removes the html5 validate message -->
+         <form class="col s6" id="myform" novalidate>
             <!-- dividing this side into another row -->
             <div class="row">
                <div class="input-field col s6">
@@ -38,12 +39,14 @@
                </div>
             </div>
 
+            <!-- password -->
             <div class="row">
-               <input-field class="col s6">
-               <label for="password">Password</label>
-               <input type="text" name="Password" id="password"/>
-               <span class="helper-text"></span>
-               </input-field>
+               <div class="input-field col s6">
+                  <label for="password">Password</label>
+                  <input type="text" name="Password" id="password"/>
+                  <span class="helper-text"></span>
+                  </input-field>
+               </div>
             </div>
             <div class="row">
                <input-field class="col s6">
