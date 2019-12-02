@@ -28,6 +28,27 @@ function validateFirstName() {
 
 // creating the checkIfEmpty function
 // passing the 'field'
+// checkIfEmpty will use another function, 'ifEmpty'
+// we are going to pass the field.value.trim function.
+// if we hit the space bar and then move to another field, 
+// the field with the space should be considered empty.
+// trim removes the extra white space from the field
 function checkIfEmpty(field) {
-   if(checkIfEmpty(field))
+   if(ifEmpty(field.value.trim())) {
+      // if it's empty set field invalid and 
+      // return true because it's empty
+      return true;
+   } else {
+      // set field to valid
+      return false; // return false because it's not empty.
+   }    
 }
+
+// creating 'isEmpty' function
+// function isEmpty takes value
+function isEmpty(value) {
+   // if that value is equal to an empty string then return true
+   if(value === '') return true;
+   return false; // equivalent to the else statment 
+}
+
