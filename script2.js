@@ -38,14 +38,21 @@ function checkIfEmpty(field) {
       // if it's empty set field invalid and 
       // return true because it's empty
       // takes the whole field, `` (back ticks) so it can take a template string
-      // $ sign to pass a variable
-      setInvalid(field, `$(field,)`)
+      // $ sign to pass a variable 'field.name'
+      // 'must not be empty' because this checks if the field is empty.
+
+      setInvalid(field, `$(field.name) must not be empty`) 
       return true;
    } else {
       // set field to valid
       return false; // return false because it's not empty.
    }    
 }
+// emplanation:
+// we get the field and if it's empty we say the name of the field which is why we
+// added the attribute of name  
+// ex: <input type="text" name="First Name" id="firstName"/>
+// the field of 'First Name' must not be empty or it will show an error.
 
 // creating 'isEmpty' function
 // function isEmpty takes value
