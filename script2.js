@@ -59,7 +59,7 @@ function checkIfEmpty(field) {
 // ex: <input type="text" name="First Name" id="firstName"/>
 // the field of 'First Name' must not be empty or it will show an error.
 
-// creating 'isEmpty' function
+// Creating 'isEmpty' function
 // function isEmpty takes value
 // first create this function then set up the logic, setting the field invalid
 function isEmpty(value) {
