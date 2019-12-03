@@ -65,7 +65,23 @@ function isEmpty(value) {
 }
 
 // creating valid and invalid functions
+// takes a fiedl and a message 
+function setInvalid(field, message) { // 'message' refers to the error message
+   // takes the field and gives it a class name of invalid
+   field.className = 'invalid'; // materialize makes it red
+   // we need to access <span> and put text into it, 
+   // the error and make it red as well
+   // manipulating the DOM
+   field.nextElementSibling.innerHTML = message;
+   field.nextElementSibling.style.color = red;
+}
 
+function setValid(field) { 
+   field.className = 'valid'; 
+   // set to empty because it might have already a message.
+   field.nextElementSibling.innerHTML = ``;  
+   // field.nextElementSibling.style.color = green;
+}
 
 
 
