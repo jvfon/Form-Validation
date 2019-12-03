@@ -29,13 +29,13 @@
             <div class="row">
                <div class="input-field col s6">
                   <label for="firstName">First Name</label>
-                  <input type="text" name="First Name" id="firstName" onFocusout="validateFirstName()"/>
-                  <!-- onFocusout validates when we leave a field-->
+                  <input type="text" name="First Name" id="firstName" onfocusout="validateFirstName()"/>
+                  <!-- onfocusout validates when we leave a field-->
                   <span class="helper-text"></span> <!-- good practice to put it after the input -->
                </div>
                <div class="input-field col s6">
                      <label for="lastName">Last Name</label>
-                     <input type="text" name="Last Name" id="lastName" onFocusout="validateLastName()"/>
+                     <input type="text" name="Last Name" id="lastName" onfocusout="validateLastName()"/>
                      <span class="helper-text"></span>
                </div>
             </div>
@@ -44,14 +44,14 @@
             <div class="row">
                <div class="input-field col s6">
                   <label for="password">Password</label>
-                  <input type="text" name="Password" id="password" onFocusout="validatePassword()"/>
+                  <input type="text" name="Password" id="password" onfocusout="validatePassword()"/>
                   <span class="helper-text"></span>
                   </input>
                </div>
             
                <div class="input-field col s6">
                   <label for="confirmPassword">Confirm Password</label>
-                  <input type="text" name="Confirm Password" id="confirmPassword" onFocusout="validateConfirmPassword()"/>
+                  <input type="text" name="Confirm Password" id="confirmPassword" onfocusout="validateConfirmPassword()"/>
                   <span class="helper-text"></span>
                   </input>
                </div>
@@ -62,7 +62,7 @@
             <div class="row">
                <div class="input-field col s12"> <!-- takes up the full width -->
                   <label for="email">Email</label>
-                  <input type="email" name="Email" id="email" onFocusout="email()"/>
+                  <input type="email" name="Email" id="email" onfocusout="validateEmail()"/>
                   <span class="helper-text"></span>
                </div>
             </div>
