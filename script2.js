@@ -44,7 +44,7 @@ function checkIfEmpty(field) {
       return true;
    } else {
       // set field to valid
-      setValid(field);
+      setValid(field); // doesn't have an error message because there no error.
       return false; // return false because it's not empty.
    }    
 }
@@ -63,4 +63,16 @@ function isEmpty(value) {
    if(value === '') return true;
    return false; // equivalent to the else statment 
 }
+
+// creating valid and invalid functions
+
+
+
+
+
+
+
+
+
+
 
