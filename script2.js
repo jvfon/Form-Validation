@@ -23,7 +23,11 @@ function validateFirstName() {
    // if the field is empty, then return. Don't check for anything else.
    if (checkIfEmpty(firstName)) return;
    // check if it has only letters
-
+   // first write the function then create the function
+   // check firstName if it has no letters, if it is the case, return.
+   if (checkIfOnlyLetters(firstName)) return; 
+   // if it not the case, return true.
+   return true;
 }
 
 // creating the checkIfEmpty function
@@ -82,6 +86,21 @@ function setValid(field) {
    field.nextElementSibling.innerHTML = ``;  
    // field.nextElementSibling.style.color = green;
 }
+
+function checkIfOnlyLetters(field) {
+   // using a regular expression and test field.value
+   if(/^[a-zA-Z]+$/.test(field.value)) {
+      // if it returns true, a-z and A-Z are in the field.
+      // if the field has anything different, it will return false.
+      // if it returns true set it to valid.
+      setValid(field);
+      return true;
+   } else {
+      setInvalid(field, `$(field.name) must contain only letters`) // passing an error message with `` (backticks)
+      return false;
+   }
+}
+
 
 
 
