@@ -37,6 +37,9 @@ function checkIfEmpty(field) {
    if(ifEmpty(field.value.trim())) {
       // if it's empty set field invalid and 
       // return true because it's empty
+      // takes the whole field, `` (back ticks) so it can take a template string
+      // $ sign to pass a variable
+      setInvalid(field, `$(field,)`)
       return true;
    } else {
       // set field to valid
@@ -46,6 +49,7 @@ function checkIfEmpty(field) {
 
 // creating 'isEmpty' function
 // function isEmpty takes value
+// first create this function then set up the logic, setting the field invalid
 function isEmpty(value) {
    // if that value is equal to an empty string then return true
    if(value === '') return true;
