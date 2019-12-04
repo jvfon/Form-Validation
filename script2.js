@@ -30,6 +30,20 @@ function validateFirstName() {
    return true;
 }
 
+function validateLastName() {
+   // check if the field is empty 
+   // using a function that hasn't been created yet.
+   // passing the whole 'LastName' field instead of only the value
+   // if the field is empty, then return. Don't check for anything else.
+   if (checkIfEmpty(lastName)) return;
+   // check if it has only letters
+   // first write the function then create the function
+   // check LastName if it has no letters, if it is the case, return.
+   if (checkIfOnlyLetters(lastName)) return; 
+   // if it not the case, return true.
+   return true;
+}
+
 // creating the checkIfEmpty function
 // passing the 'field'
 // checkIfEmpty will use another function, 'ifEmpty'
@@ -93,7 +107,7 @@ function checkIfOnlyLetters(field) {
    if(/^[a-zA-Z]+$/.test(field.value)) {
       // if it returns true, a-z and A-Z are in the field.
       // if the field has anything different, it will return false.
-      // if it returns true, set it to valid.
+      // if it returns true,  set it to valid.
       setValid(field);
       return true;
    } else {
