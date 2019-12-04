@@ -14,6 +14,8 @@ const form = document.getElementById('myForm');
 const green = '#4CAF50';
 const red = '#F44336';
 
+
+// VALIDATORS
 // validate the first name
 // arrow functions won't be used because they won't simply the syntax
 function validateFirstName() {
@@ -33,6 +35,21 @@ function validateFirstName() {
 function validateLastName() {
    if (checkIfEmpty(lastName)) return;
    if (!checkIfOnlyLetters(lastName)) return; 
+   return true;
+}
+
+function validatePassword() {
+   // if the field is not empty 
+   // if it's empty, return
+   if(checkIfEmpty(password)) return;
+   // check the length of the password
+   // ! = not
+   // if it doesn't meet the length
+   // meetlegnth passes a field (password) --- created later under utility functions
+   // min. legnth = 6, max. length = 100
+   if (!meetLength(password, 6, 100)) return;
+   // check password against our character set
+
    return true;
 }
 
@@ -65,6 +82,8 @@ function checkIfEmpty(field) {
 // ex: <input type="text" name="First Name" id="firstName"/>
 // the field of 'First Name' must not be empty or it will show an error.
 
+
+// UTILITY FUNCTIONS
 // Functions section
 // Creating 'isEmpty' function
 // function isEmpty takes value
@@ -108,7 +127,17 @@ function checkIfOnlyLetters(field) {
    }
 }
 
-
+function meetLength(field, minLength, maxLength) {
+   // "value", the value the user types is
+   // larger or equal to the minLength
+   if (field.value.length >= minLength && field.value.length < maxLength) {
+      // if true then:
+      setValid(field);
+      return true;
+   } else if {
+      
+   }
+}
 
 
 
