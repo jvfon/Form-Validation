@@ -32,7 +32,7 @@ function validateFirstName() {
 
 function validateLastName() {
    if (checkIfEmpty(lastName)) return;
-   if (checkIfOnlyLetters(lastName)) return; 
+   if (!checkIfOnlyLetters(lastName)) return; 
    return true;
 }
 
