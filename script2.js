@@ -31,16 +31,8 @@ function validateFirstName() {
 }
 
 function validateLastName() {
-   // check if the field is empty 
-   // using a function that hasn't been created yet.
-   // passing the whole 'LastName' field instead of only the value
-   // if the field is empty, then return. Don't check for anything else.
    if (checkIfEmpty(lastName)) return;
-   // check if it has only letters
-   // first write the function then create the function
-   // check LastName if it has no letters, if it is the case, return.
    if (checkIfOnlyLetters(lastName)) return; 
-   // if it not the case, return true.
    return true;
 }
 
