@@ -93,6 +93,7 @@ function validateEmail() {
   if (!containsCharacters(email, 5)) return;
   return true;
 }
+
 // Utility functions
 function checkIfEmpty(field) {
   if (isEmpty(field.value.trim())) {
@@ -104,7 +105,7 @@ function checkIfEmpty(field) {
     setValid(field);
     return false;
   }
-}
+} 
 function isEmpty(value) {
   if (value === '') return true;
   return false;
