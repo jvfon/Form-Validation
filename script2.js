@@ -25,7 +25,7 @@ function validateFirstName() {
    // check if it has only letters
    // first write the function then create the function
    // check firstName if it has no letters, if it is the case, return.
-   if (checkIfOnlyLetters(firstName)) return; 
+   if (!checkIfOnlyLetters(firstName)) return; 
    // if it not the case, return true.
    return true;
 }
@@ -90,7 +90,7 @@ function setInvalid(field, message) { // 'message' refers to the error message
 function setValid(field) { 
    field.className = 'valid'; 
    // set to empty because it might have already a message.
-   field.nextElementSibling.innerHTML = ``;  
+   field.nextElementSibling.innerHTML = '';  
    // field.nextElementSibling.style.color = green;
 }
 
@@ -103,7 +103,7 @@ function checkIfOnlyLetters(field) {
       setValid(field);
       return true;
    } else {
-      setInvalid(field, `$(field.name) must contain only letters`) // passing an error message with `` (backticks)
+      setInvalid(field, `${field.name} must contain only letters`) // passing an error message with `` (backticks)
       return false;
    }
 }
