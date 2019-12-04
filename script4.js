@@ -9,7 +9,7 @@ const form = document.getElementById('myForm');
 // Validation colors
 const green = '#4CAF50';
 const red = '#F44336';
-
+/*
 // Handle form
 form.addEventListener('submit', function(event) {
   // Prevent default behaviour
@@ -44,7 +44,7 @@ form.addEventListener('submit', function(event) {
       container.replaceChild(panel, loaderDiv);
     }, 1000);
   }
-});
+}); */
 
 // Validators
 function validateFirstName() {
