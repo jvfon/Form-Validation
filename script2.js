@@ -89,7 +89,6 @@ function checkIfEmpty(field) {
 // ex: <input type="text" name="First Name" id="firstName"/>
 // the field of 'First Name' must not be empty or it will show an error.
 
-
 // UTILITY FUNCTIONS
 // Functions section
 // Creating 'isEmpty' function
@@ -102,6 +101,7 @@ function isEmpty(value) {
 }
 
 // creating valid and invalid functions
+
 // takes a fiedl and a message 
 function setInvalid(field, message) { // 'message' refers to the error message
    // takes the field and gives it a class name of invalid
