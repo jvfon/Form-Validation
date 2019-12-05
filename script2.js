@@ -141,7 +141,6 @@ function meetLength(field, minLength, maxLength) {
       setInvalid(field, `${field.name} must be shorter than ${maxLength} character`);
       return false;
    }
-   return false;
 }
 
 
