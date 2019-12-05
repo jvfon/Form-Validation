@@ -101,7 +101,6 @@ function isEmpty(value) {
 }
 
 // creating valid and invalid functions
-
 // takes a fiedl and a message 
 function setInvalid(field, message) { // 'message' refers to the error message
    // takes the field and gives it a class name of invalid
@@ -134,6 +133,7 @@ function checkIfOnlyLetters(field) {
    }
 }
 
+// testing
 function meetLength(field, minLength, maxLength) {
    // "value", the value the user types is
    // larger or equal to the minLength
