@@ -55,7 +55,6 @@ function validatePassword() {
    // 4 - required: uppercase, lowercase, one number, one special character.
 
    // it it doesn't contain the character, return - create the function at the bottom
-   
    if(!containsCharacters(password, 1)) return;
    return true;
 }
