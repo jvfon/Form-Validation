@@ -134,8 +134,10 @@ function meetLength(field, minLength, maxLength) {
       // if true then:
       setValid(field);
       return true;
-   } else if {
+   } else if {(field.value.length < minLength) {
       
+   }
+
    }
 }
 
