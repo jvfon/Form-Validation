@@ -48,6 +48,7 @@ function validatePassword() {
    // meetlegnth passes a field (password) --- created later under utility functions
    // min. legnth = 6, max. length = 100
    if (!meetLength(password, 6, 100)) return;
+   
    // check password against our character set - check password against certain criteria
    // 1- require the password to at least have some letters.
    // 2- require the password to have at least 1 letter and 1 number.
