@@ -157,11 +157,13 @@ function containsCharacters(field, code) {
          // check if the field contains letters
          // check https://pastebin.com/RS5ubqvv for regEx
          // test regEx here: https://regex101.com/
-         regEx = /(?=.*[a-zA-Z])/
+         regEx = /(?=.*[a-zA-Z])/ // only tests for letters
       default: // default case
          return false;
    }
 } 
+
+
 
 
 
