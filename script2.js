@@ -154,13 +154,14 @@ function containsCharacters(field, code) {
    let regEx; // regEx = regular expression
    switch(code) { // switch   --> fin out about it
       case : 1 
-         // letters
+         // check if the field contains letters
          // check https://pastebin.com/RS5ubqvv for regEx
+         // test regEx here: https://regex101.com/
          regEx = /(?=.*[a-zA-Z])/
       default: // default case
          return false;
    }
-}
+} 
 
 
 
