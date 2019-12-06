@@ -155,7 +155,8 @@ function containsCharacters(field, code) {
    switch(code) { // switch   --> fin out about it
       case : 1 
          // letters
-         regEx = 
+         // check https://pastebin.com/RS5ubqvv for regEx
+         regEx = /(?=.*[a-zA-Z])/
       default: // default case
          return false;
    }
