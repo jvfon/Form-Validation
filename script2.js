@@ -150,7 +150,16 @@ function meetLength(field, minLength, maxLength) {
    }
 }
 
-
+function containsCharacters(field, code) {
+   let regEx; // regEx = regular expression
+   switch(code) { // switch   --> fin out about it
+      case : 1 
+         // letters
+         regEx = 
+      default: // default case
+         return false;
+   }
+}
 
 
 
