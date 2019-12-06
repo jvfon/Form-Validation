@@ -133,7 +133,7 @@ function checkIfOnlyLetters(field) {
    }
 }
 
-// testing
+
 function meetLength(field, minLength, maxLength) {
    // "value", the value the user types is
    // larger or equal to the minLength
