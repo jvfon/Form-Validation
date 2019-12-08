@@ -201,9 +201,9 @@ function matchWithRegEx(regEx, field, message) {
       setValid(field);            //  we set the field to valid and
       return true;               // we return true.
    } else {
-      setInvalid(field, error message) {
+      setInvalid(field, message);
          return false; // after this we go up to the function containsCharacters
-      }                 // and create an error message
+                      // and create an error message
    }
 }
 
