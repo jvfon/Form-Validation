@@ -153,7 +153,7 @@ function meetLength(field, minLength, maxLength) {
 function containsCharacters(field, code) {
    let regEx; // regEx = regular expression
    switch(code) { // switch   --> fin out about it
-      case : 1 
+      case 1:  
          // check if the field contains letters
          // check https://pastebin.com/RS5ubqvv for regEx
          // test regEx here: https://regex101.com/
@@ -174,6 +174,7 @@ function containsCharacters(field, code) {
             // has return true (at the bottom)
             // we can return the function above 'return matchWithRegEx(regEx, field, 'Must contain at least one letter');'
 
+      case 2:      
 
       default: // default case
          return false;
