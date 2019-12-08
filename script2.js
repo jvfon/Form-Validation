@@ -157,7 +157,7 @@ function containsCharacters(field, code) {
          // check if the field contains letters
          // check https://pastebin.com/RS5ubqvv for regEx
          // test regEx here: https://regex101.com/
-         regEx = /(?=.*[a-zA-Z])/ // only tests for letters
+         regEx = /(?=.*[a-zA-Z])/; // only tests for letters
             
          // using the function matchWithRegEx
          //we create an error message and we give it to this fucntion
@@ -174,7 +174,15 @@ function containsCharacters(field, code) {
             // has return true (at the bottom)
             // we can return the function above 'return matchWithRegEx(regEx, field, 'Must contain at least one letter');'
 
-      case 2:      
+      case 2:    
+         // letters and numbers
+         regEx = /(?=.*\d)(?=.*[a-zA-Z])/;
+         return matchWithRegEx(regEx, field, 'Must contain at least one letter and one number');
+
+      case 3:
+         // uppercase, lowercase and number
+         regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/
+         return matchWithRegEx(regEx, field, 'Must contain at least one uppercase, one lowercase and one number');
 
       default: // default case
          return false;
