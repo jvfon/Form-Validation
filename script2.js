@@ -128,7 +128,7 @@ function checkIfOnlyLetters(field) {
       setValid(field);
       return true;
    } else {
-      setInvalid(field, `${field.name} must contain only letters`) // passing an error message with `` (backticks)
+      setInvalid(field, `${field.name} must contain only letters`); // passing an error message with `` (backticks)
       return false;
    }
 }
