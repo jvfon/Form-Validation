@@ -171,7 +171,7 @@ function matchWithRegEx(regEx, field, message) {
       return true;               // we return true.
    } else {
       setInvalid(field, error message) {
-         
+         return false;
       }
    }
 }
