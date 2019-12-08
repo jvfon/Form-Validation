@@ -158,6 +158,10 @@ function containsCharacters(field, code) {
          // check https://pastebin.com/RS5ubqvv for regEx
          // test regEx here: https://regex101.com/
          regEx = /(?=.*[a-zA-Z])/ // only tests for letters
+            
+         // using the function matchWithRegEx
+         //we create an error message and we give it to this fucntion
+            matchWithRegEx(regEx, field), 'Must contain at least one letter' // 'field' the field that we passed this funciton 
       default: // default case
          return false;
    }
@@ -171,8 +175,8 @@ function matchWithRegEx(regEx, field, message) {
       return true;               // we return true.
    } else {
       setInvalid(field, error message) {
-         return false;
-      }
+         return false; // after this we go up to the function containsCharacters
+      }                 // and create an error message
    }
 }
 
