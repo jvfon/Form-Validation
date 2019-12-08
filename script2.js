@@ -128,7 +128,7 @@ function checkIfOnlyLetters(field) {
       setValid(field);
       return true;
    } else {
-      setInvalid(field, `${field.name} must contain only letters`); // passing an error message with `` (backticks)
+      setInvalid(field, `${field.name} must contain only letters`);   // passing an error message with `` (backticks)
       return false;
    }
 }
@@ -141,7 +141,7 @@ function meetLength(field, minLength, maxLength) {
       // if true then:
       setValid(field);
       return true;
-   } else if {(field.value.length < minLength) {
+   } else if (field.value.length < minLength) {
       setInvalid(field, `${field.name} must be at least ${minLength} characters long`);
       return false;
    } else {
