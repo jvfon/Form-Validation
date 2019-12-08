@@ -161,7 +161,20 @@ function containsCharacters(field, code) {
             
          // using the function matchWithRegEx
          //we create an error message and we give it to this fucntion
-            matchWithRegEx(regEx, field, 'Must contain at least one letter');  // 'field' the field that we passed this funciton 
+            return matchWithRegEx(regEx, field, 'Must contain at least one letter');  // 'field' the field that we passed this funciton 
+            // if we call the function (w/o return)
+            // below 'function matchWithRegEx() is going to set it to invalid'
+            // we want 'function validatePassword() { if(!containsCharacters(password, 1)) return; to
+            // return a value
+            // since this function: 
+               // function matchWithRegEx(regEx, field, message) {
+               // if(field.value.match(regEx)) { 
+               // setValid(field);           
+               // return true; 
+            // has return true (at the bottom)
+            // we can return the function above 'return matchWithRegEx(regEx, field, 'Must contain at least one letter');'
+
+
       default: // default case
          return false;
    }
