@@ -161,7 +161,7 @@ function containsCharacters(field, code) {
             
          // using the function matchWithRegEx
          //we create an error message and we give it to this fucntion
-            matchWithRegEx(regEx, field), 'Must contain at least one letter' // 'field' the field that we passed this funciton 
+            matchWithRegEx(regEx, field, 'Must contain at least one letter');  // 'field' the field that we passed this funciton 
       default: // default case
          return false;
    }
