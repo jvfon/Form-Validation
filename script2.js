@@ -56,7 +56,7 @@ function validatePassword() {
    // 4 - required: uppercase, lowercase, one number, one special character.
 
    // it it doesn't contain the character, return - create the function at the bottom
-   if(!containsCharacters(password, 1)) return;
+   
    return true;
 }
 
@@ -74,7 +74,7 @@ function checkIfEmpty(field) {
       // takes the whole field, `` (back ticks) so it can take a template string
       // $ sign to pass a variable 'field.name'
       // 'must not be empty' because this checks if the field is empty.
-      setInvalid(field, `$(field.name) must not be empty`);
+      setInvalid(field, `${field.name} must not be empty`);
       return true;
    } else {
       // set field to valid
