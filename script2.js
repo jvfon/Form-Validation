@@ -79,6 +79,12 @@ function validateConfirmPassword() {
    return true;
 }
 
+function validateEmail() {
+   if (checkIfEmpty(email)) return;
+   if(!containsCharacters(email, 5)) return; // '5' is the case number
+   return true; // return true if it passes the checks
+}
+
 // creating the checkIfEmpty function
 // passing the 'field'
 // checkIfEmpty will use another function, 'ifEmpty'
@@ -207,6 +213,9 @@ function containsCharacters(field, code) {
          // uppercase, lowercase, number and special character
          regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/;
          return matchWithRegEx(regEx, field, 'Must contain at least one uppercase letter, one lowercase letter, one number and one special character');
+
+      case 5;
+         // 
 
       default: // default case
          return false;
