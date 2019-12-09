@@ -14,6 +14,18 @@ const form = document.getElementById('myForm');
 const green = '#4CAF50';
 const red = '#F44336';
 
+// Security - handle form
+// listening for an event type submit
+// once a form is submited a function runs that takes an event
+form.addEventListener('submit', function(event) {
+   // prevent default behavior so password won't show on the url field
+   event.preventDefault();
+   if (validateFirstName() && validateLastName() && validatePassword() && 
+   validateConfirmPassword() && validateEmail()); {
+      // we need to get the user's name so we can display the name "welcome user"
+      const 
+   }
+});
 
 // VALIDATORS
 // validate the first name
