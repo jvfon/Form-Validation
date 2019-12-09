@@ -66,8 +66,17 @@ function validateConfirmPassword() {
    // if password is invalid it will give you an error message
    if(password.className !== 'valid') { // if someone click the field and then leaves, the field is checked to
                                        // see if what's on the field is valid or not.
-
+      setInvalid(confirmPassword, 'Password must be valid');
+      return;
    }
+   // check if they match
+   if(password.value !== confirmPassword.value) {
+      setInvalid(confirmPassword, 'Passwords must match');
+      return;
+   } else {
+      setValid(confirmPassword);
+   }
+   return true;
 }
 
 // creating the checkIfEmpty function
