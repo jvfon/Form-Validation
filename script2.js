@@ -56,8 +56,18 @@ function validatePassword() {
    // 4 - required: uppercase, lowercase, one number, one special character.
 
    // it it doesn't contain the character, return - create the function at the bottom
-   
+   if (!containsCharacters(password, 2)) return;
    return true;
+}
+
+function validateConfirmPassword() {
+   // no need to validate the same way password was validated
+   // we need to check if password is valid
+   // if password is invalid it will give you an error message
+   if(password.className !== 'valid') { // if someone click the field and then leaves, the field is checked to
+                                       // see if what's on the field is valid or not.
+
+   }
 }
 
 // creating the checkIfEmpty function
