@@ -23,7 +23,32 @@ form.addEventListener('submit', function(event) {
    if (validateFirstName() && validateLastName() && validatePassword() && 
    validateConfirmPassword() && validateEmail()); {
       // we need to get the user's name so we can display the name "welcome user"
-      const 
+      const name = firstName.value;
+      // we want to get the container to show how fast the page is loading.
+      const container = document.querySelector ('div.container');
+
+      // the div for the preloader animation
+      const loader = document.createElement('div');
+      // the preloader animation - materialize/css/components/indeterminate
+      loader.className = 'progress';
+      // we need the div that's inside of it
+      const loadingBar = document.createElement('div');
+      loadingBar.className = 'indeterminate';
+      loader.appendChild(loadingBar);
+
+      // adding the loader div to the container
+      container.appendChild(loader);
+      // mimicking asynchronous code
+      // 1 sec in milliseconds
+      // we need to show the bar and then after 1 second, show the panel
+      setTimeout(function(){
+         const loaderDiv = document.querySelector('div.progress'); // assuming there is only one loader in the page
+         const panel = document.createElement('div');
+         
+      }, 1000)
+
+
+
    }
 });
 
