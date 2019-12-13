@@ -34,10 +34,10 @@ form.addEventListener('submit', function(event) {
       // we need the div that's inside of it
       const loadingBar = document.createElement('div');
       loadingBar.className = 'indeterminate';
-      loader.appendChild(loadingBar);
+      loader.appendChild(loadingBar); // created a loading bar
 
       // adding the loader div to the container
-      container.appendChild(loader);
+      container.appendChild(loader); 
       // mimicking asynchronous code
       // 1 sec in milliseconds
       // we need to show the bar and then after 1 second, show the panel
@@ -46,11 +46,19 @@ form.addEventListener('submit', function(event) {
          const panel = document.createElement('div');
          panel.className = 'card-panel green'; // green color
          const text = document.createElement('span');
+         text.className = 'white-text'; // changed text to white to contrast better with the green background
          text.appendChild(document.createTextNode(`Sign up successful, welcome to socialApe ${name}`));
          panel.appendChild(text); // append text to the panel
          container.replaceChild(panel, loaderDiv); // takes the new one (panel) and the old one (loaderDiv)
-      }, 1000)
-
+      }, 1000) // give it one second
+      // we need asynchronous code to talk to the server to log in an user - either a promise or async await
+      // in this promise before you send the data to the server you send it to a loading bar
+      // once the promise is fulfilled, then you change the loading bar to the welcome panel
+      // during that down time it will show the loading bar
+      // here there is no server so we use 'setTimeout' and we give it one second (1000)
+      // loader.appendChild(loadingBar); // created a loading bar
+      // container.appendChild(loader); // adding the loader div to the container
+      // and after one second we show the loading bar.
 
 
    }
