@@ -44,7 +44,7 @@ form.addEventListener('submit', function(event) {
       setTimeout(function(){
          const loaderDiv = document.querySelector('div.progress'); // assuming there is only one loader in the page
          const panel = document.createElement('div');
-         panel.className = 'card.panel.green';
+         panel.className = 'card-panel green'; // green color
       }, 1000)
 
 
