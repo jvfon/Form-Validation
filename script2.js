@@ -44,11 +44,11 @@ form.addEventListener('submit', function(event) {
       setTimeout(function(){
          const loaderDiv = document.querySelector('div.progress'); // assuming there is only one loader in the page
          const panel = document.createElement('div');
-         
+         panel.className = []
       }, 1000)
 
 
-
+      
    }
 });
 
