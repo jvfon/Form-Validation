@@ -47,7 +47,8 @@ form.addEventListener('submit', function(event) {
          panel.className = 'card-panel green'; // green color
          const text = document.createElement('span');
          text.appendChild(document.createTextNode(`Sign up successful, welcome to socialApe ${name}`));
-         panel.appendChild(text);
+         panel.appendChild(text); // append text to the panel
+         container.replaceChild(panel, loaderDiv); // takes the new one (panel) and the old one (loaderDiv)
       }, 1000)
 
 
