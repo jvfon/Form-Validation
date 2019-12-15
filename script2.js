@@ -21,8 +21,14 @@ const red = '#F44336';
 form.addEventListener('submit', function(event) {
    // prevent default behavior so password won't show on the url field
    event.preventDefault();
-   if (validateFirstName() && validateLastName() && validatePassword() && 
-   validateConfirmPassword() && validateEmail()); {
+
+   if (
+      validateFirstName() &&
+      validateLastName() &&
+      validatePassword() &&
+      validateConfirmPassword() &&
+      validateEmail()
+   ) {
       // we need to get the user's name so we can display the name "welcome user"
       const name = firstName.value;
       // we want to get the container to show how fast the page is loading.
