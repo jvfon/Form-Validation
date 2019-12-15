@@ -29,10 +29,19 @@ form.addEventListener('submit', function(event) {
       validateConfirmPassword() &&
       validateEmail()
    ) {
+
+      loader.className = 'progress';
+      const loadingBar = document.createElement('div');
+      loadingBar.className = 'indeterminate';
+      loader.appendChild(loadingBar);
+      container.appendChild(loader);
+      setTimeout(function() {
+
+
       // we need to get the user's name so we can display the name "welcome user"
       const name = firstName.value;
       // we want to get the container to show how fast the page is loading.
-      const container = document.querySelector ('div.container');
+      const container = document.querySelector('div.container');
 
       // the div for the preloader animation
       const loader = document.createElement('div');
