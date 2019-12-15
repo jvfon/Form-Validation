@@ -3,11 +3,7 @@
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
 const password = document.getElementById('password');
-
-const password = document.getElementById('password');
-
-
-const confirmPassword = document.getElementById('confirmPassword');
+const confirmPassword = document.getElementById('conformPassword');
 const email = document.getElementById('email');
 
 // form
