@@ -30,14 +30,6 @@ form.addEventListener('submit', function(event) {
       validateEmail()
    ) {
 
-      loader.className = 'progress';
-      const loadingBar = document.createElement('div');
-      loadingBar.className = 'indeterminate';
-      loader.appendChild(loadingBar);
-      container.appendChild(loader);
-      setTimeout(function() {
-
-
       // we need to get the user's name so we can display the name "welcome user"
       const name = firstName.value;
       // we want to get the container to show how fast the page is loading.
@@ -53,11 +45,12 @@ form.addEventListener('submit', function(event) {
       loader.appendChild(loadingBar); // created a loading bar
 
       // adding the loader div to the container
-      container.appendChild(loader); 
+      container.appendChild(loader);
       // mimicking asynchronous code
       // 1 sec in milliseconds
       // we need to show the bar and then after 1 second, show the panel
-      setTimeout(function(){
+
+      setTimeout(function(){   
          const loaderDiv = document.querySelector('div.progress'); // assuming there is only one loader in the page
          const panel = document.createElement('div');
          panel.className = 'card-panel green'; // green color
