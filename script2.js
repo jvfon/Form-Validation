@@ -58,6 +58,7 @@ form.addEventListener('submit', function(event) {
          text.className = 'white-text'; // changed text to white to contrast better with the green background
          
          text.appendChild(document.createTextNode(`Sign up successful, welcome to socialApe ${name}`));
+         
          panel.appendChild(text); // append text to the panel
          container.replaceChild(panel, loaderDiv); // takes the new one (panel) and the old one (loaderDiv)
       }, 1000) // give it one second
