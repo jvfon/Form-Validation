@@ -142,16 +142,11 @@ function validateConfirmPassword() {
 
 function validateEmail() {
    if (checkIfEmpty(email)) return;
-   if (!containsCharacters(email, 5)) return;
-   return true;
- }
-
-function validateEmail() {
-   if (checkIfEmpty(email)) return;
-   if(!containsCharacters(email, 5)) return; // '5' is the case number
+   if (!containsCharacters(email, 5)) return; // '5' is the case number
    return true; // return true if it passes the checks
 }
 
+// Utility functions
 // creating the checkIfEmpty function
 // passing the 'field'
 // checkIfEmpty will use another function, 'ifEmpty'
