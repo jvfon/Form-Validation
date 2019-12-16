@@ -75,6 +75,7 @@ form.addEventListener('submit', function(event) {
    }
 });
 
+
 // VALIDATORS
 // validate the first name
 // arrow functions won't be used because they won't simply the syntax
@@ -138,6 +139,12 @@ function validateConfirmPassword() {
    }
    return true;
 }
+
+function validateEmail() {
+   if (checkIfEmpty(email)) return;
+   if (!containsCharacters(email, 5)) return;
+   return true;
+ }
 
 function validateEmail() {
    if (checkIfEmpty(email)) return;
