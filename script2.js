@@ -199,10 +199,10 @@ function setInvalid(field, message) { // 'message' refers to the error message
    field.nextElementSibling.style.color = red;
 }
 
-function setValid(field) { 
-   field.className = 'valid'; 
+function setValid(field) {
+   field.className = 'valid';
    // set to empty because it might have already a message.
-   field.nextElementSibling.innerHTML = '';  
+   field.nextElementSibling.innerHTML = '';
    // field.nextElementSibling.style.color = green;
 }
 
