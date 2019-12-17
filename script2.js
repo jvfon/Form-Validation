@@ -206,16 +206,17 @@ function setValid(field) {
    // field.nextElementSibling.style.color = green;
 }
 
-function checkIfOnlyLetters(field) {
+
+function checkIfONlyLetters(field) {
    // using a regular expression and test field.value
-   if(/^[a-zA-Z]+$/.test(field.value)) {
+   if (/^[a-zA-Z]+$/.test(field.value)) {
       // if it returns true, a-z and A-Z are in the field.
       // if the field has anything different, it will return false.
       // if it returns true,  set it to valid.
       setValid(field);
       return true;
    } else {
-      setInvalid(field, `${field.name} must contain only letters`);   // passing an error message with `` (backticks)
+      setInvalid(field, `${field.name} must contain only letters`);
       return false;
    }
 }
