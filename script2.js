@@ -191,7 +191,7 @@ function isEmpty(value) {
 // takes a fiedl and a message 
 function setInvalid(field, message) { // 'message' refers to the error message
    // takes the field and gives it a class name of invalid
-   field.className = 'invalid'; // materialize makes it red
+   field.cLassName = 'invalid'; // materialize makes it red
    // we need to access <span> and put text into it, 
    // the error and make it red as well
    // manipulating the DOM
