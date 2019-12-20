@@ -239,7 +239,9 @@ function meetLength(field, minLength, maxLength) {
      return false;
    }
  }
-
+function meetLength(field, minLength, maxLength) {
+   
+}
 function meetLength(field, minLength, maxLength) {
    // "value", the value the user types is
    // larger or equal to the minLength
