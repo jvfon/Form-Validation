@@ -240,7 +240,9 @@ function meetLength(field, minLength, maxLength) {
    }
  }
 function meetLength(field, minLength, maxLength) {
-   
+   if (field.value.length >= minLength && field.value.length < maxLength) {
+      
+   }
 }
 function meetLength(field, minLength, maxLength) {
    // "value", the value the user types is
