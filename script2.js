@@ -257,31 +257,20 @@ function containsCharacters(field, code) {
             filed,
             'Must contain at least one letter and one number'
          );
+      case 3:
+         regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
+         return matchWithRegEx(
+            regEx,
+            field,
+            'Must contain at least one uppercase, one lowercase letter and one number'
+         );
    }
 }
 function containsCharacters(field, code) {
    let regEx;
    switch (code) {
-     case 1:
-       // letters
-       regEx = /(?=.*[a-zA-Z])/;
-       return matchWithRegEx(regEx, field, 'Must contain at least one letter');
-     case 2:
-       // letter and numbers
-       regEx = /(?=.*\d)(?=.*[a-zA-Z])/;
-       return matchWithRegEx(
-         regEx,
-         field,
-         'Must contain at least one letter and one number'
-       );
-     case 3:
-       // uppercase, lowercase and number
-       regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/;
-       return matchWithRegEx(
-         regEx,
-         field,
-         'Must contain at least one uppercase, one lowercase letter and one number'
-       );
+
+
      case 4:
        // uppercase, lowercase, number and special char
        regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/;
