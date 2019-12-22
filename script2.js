@@ -221,26 +221,12 @@ function checkIfONlyLetters(field) {
    }
 }
 
+
 function meetLength(field, minLength, maxLength) {
+   // "value", the value the user types is
+   // larger or equal to the minLength
    if (field.value.length >= minLength && field.value.length < maxLength) {
-     setValid(field);
-     return true;
-   } else if (field.value.length < minLength) {
-     setInvalid(
-       field,
-       `${field.name} must be at least ${minLength} characters long`
-     );
-     return false;
-   } else {
-     setInvalid(
-       field,
-       `${field.name} must be shorter than ${maxLength} characters`
-     );
-     return false;
-   }
- }
-function meetLength(field, minLength, maxLength) {
-   if (field.value.length >= minLength && field.value.length < maxLength) {
+      // if true then:
       setValid(field);
       return true;
    } else if (field.value.length < minLength) {
@@ -257,21 +243,8 @@ function meetLength(field, minLength, maxLength) {
       return false;       
    }
 }
-function meetLength(field, minLength, maxLength) {
-   // "value", the value the user types is
-   // larger or equal to the minLength
-   if (field.value.length >= minLength && field.value.length < maxLength) {
-      // if true then:
-      setValid(field);
-      return true;
-   } else if (field.value.length < minLength) {
-      setInvalid(field, `${field.name} must be at least ${minLength} characters long`);
-      return false;
-   } else {
-      setInvalid(field, `${field.name} must be shorter than ${maxLength} character`);
-      return false;
-   }
-}
+
+
 
 function containsCharacters(field, code) {
    let regEx; // regEx = regular expression
