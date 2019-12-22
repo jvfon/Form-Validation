@@ -248,7 +248,8 @@ function containsCharacters(field, code) {
    let regEx;
    switch (code) {
       case 1:
-         
+        regEx = /(?=.*[a-zA-Z])/;
+        return matchWithRegEx(regEx, field, 'Must contain at least one letter');
    }
 }
 function containsCharacters(field, code) {
