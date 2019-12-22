@@ -250,6 +250,11 @@ function containsCharacters(field, code) {
       case 1:
         regEx = /(?=.*[a-zA-Z])/;
         return matchWithRegEx(regEx, field, 'Must contain at least one letter');
+      case 2:
+         regEx = /(?=.*\d)(?=.*[a-zA-Z])/;
+         return matchWithRegEx(
+            
+         )
    }
 }
 function containsCharacters(field, code) {
