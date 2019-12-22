@@ -253,8 +253,10 @@ function containsCharacters(field, code) {
       case 2:
          regEx = /(?=.*\d)(?=.*[a-zA-Z])/;
          return matchWithRegEx(
-            
-         )
+            regEx,
+            filed,
+            'Must contain at least one letter and one number'
+         );
    }
 }
 function containsCharacters(field, code) {
