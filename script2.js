@@ -264,6 +264,13 @@ function containsCharacters(field, code) {
             field,
             'Must contain at least one uppercase, one lowercase letter and one number'
          );
+      case 4:
+         regEx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/; 
+         return matchWithRegEx(
+            regEx,
+            field,
+            'Must contain at least one uppercase, one lowercase letter, one number and one special character'
+         );
    }
 }
 function containsCharacters(field, code) {
