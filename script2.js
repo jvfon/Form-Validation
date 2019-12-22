@@ -246,6 +246,10 @@ function meetLength(field, minLength, maxLength) {
 
 function containsCharacters(field, code) {
    let regEx;
+   switch (code) {
+      case 1:
+         
+   }
 }
 function containsCharacters(field, code) {
    let regEx;
