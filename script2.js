@@ -249,7 +249,13 @@ function meetLength(field, minLength, maxLength) {
          `${field.name} must be at least ${minLength} characters long`
       );
       return false; 
-   } else {}
+   } else {
+      setInvalid(
+         field,
+         `${field.name} must be at least ${maxLength} characters long`
+      );
+      return false;       
+   }
 }
 function meetLength(field, minLength, maxLength) {
    // "value", the value the user types is
