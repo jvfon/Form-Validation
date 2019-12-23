@@ -271,20 +271,11 @@ function containsCharacters(field, code) {
             field,
             'Must contain at least one uppercase, one lowercase letter, one number and one special character'
          );
+      case 5:
+         regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+         return matchWithRegEx(regEx, field, 'Must be a valid email address');
    }
 }
-function containsCharacters(field, code) {
-   let regEx;
-   switch (code) {
-
-     case 5:
-       // Email pattern
-       regEx = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-       return matchWithRegEx(regEx, field, 'Must be a valid email address');
-     default:
-       return false;
-   }
- }
 
 function containsCharacters(field, code) {
    let regEx; // regEx = regular expression
