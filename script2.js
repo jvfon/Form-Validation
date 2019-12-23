@@ -1,3 +1,5 @@
+// script3.js works
+
 // bring all the input fields
 
 const firstName = document.getElementById('firstName');
@@ -330,15 +332,14 @@ function containsCharacters(field, code) {
 // testing against regular expressions
 // takes the regular expression itself and the field, the message
 function matchWithRegEx(regEx, field, message) {
-   if(field.value.match(regEx)) { // if it matches the regEx, the field is valide
+   if (field.value.match(regEx)) { // if it matches the regEx, the field is valide
       setValid(field);            //  we set the field to valid and
       return true;               // we return true.
    } else {
       setInvalid(field, message);
-         return false; // after this we go up to the function containsCharacters
+      return false; // after this we go up to the function containsCharacters
                       // and create an error message
    }
 }
-
 
 

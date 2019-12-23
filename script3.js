@@ -1,3 +1,5 @@
+// This version works
+
 // Input fields
 const firstName = document.getElementById('firstName');
 const lastName = document.getElementById('lastName');
